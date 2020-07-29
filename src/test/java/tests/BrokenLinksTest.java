@@ -28,7 +28,7 @@ public class BrokenLinksTest {
 	@BeforeMethod
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver","c:\\Selenium\\chromedriver.exe");
-        driver = new ChromeDriver();
+		driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, 3000);
 	}
