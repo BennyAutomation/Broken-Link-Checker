@@ -20,7 +20,6 @@ public class BrokenLinksTest {
 	private static final String URL = "https://***********.com/";
 	private static final By LINK_TAG = By.tagName("a");
 	
-	
 	WebDriver driver;
 	WebDriverWait wait;
 	int brokenLinks;
@@ -54,7 +53,6 @@ public class BrokenLinksTest {
         System.out.println("VALID: " + validLinks);
 	}
 	
-	
 	private void verifyLinkStatus(String urlString) {
 		int status = 404;
 		
@@ -77,22 +75,5 @@ public class BrokenLinksTest {
 			validLinks++;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
