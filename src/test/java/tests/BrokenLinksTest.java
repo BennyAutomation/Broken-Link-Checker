@@ -29,8 +29,8 @@ public class BrokenLinksTest {
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver","c:\\Selenium\\chromedriver.exe");
 		driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, 3000);
+        	driver.manage().window().maximize();
+        	wait = new WebDriverWait(driver, 3000);
 	}
 	
 	@AfterMethod
@@ -40,17 +40,17 @@ public class BrokenLinksTest {
 	
 	@Test
 	public void BrokenLinkTest() {
-        driver.get(URL);
+        	driver.get(URL);
         
-        List<WebElement> allLinks = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(LINK_TAG));
-        System.out.println("# of links = " + allLinks.size());
+        	List<WebElement> allLinks = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(LINK_TAG));
+        	System.out.println("# of links = " + allLinks.size());
         
-        brokenLinks = validLinks = 0;
-        for (WebElement link : allLinks) {
-        	verifyLinkStatus(link.getAttribute("href"));
-        }
-        System.out.println("BROKEN: " + brokenLinks);
-        System.out.println("VALID: " + validLinks);
+        	brokenLinks = validLinks = 0;
+        	for (WebElement link : allLinks) {
+        		verifyLinkStatus(link.getAttribute("href"));
+        	}
+        	System.out.println("BROKEN: " + brokenLinks);
+        	System.out.println("VALID: " + validLinks);
 	}
 	
 	private void verifyLinkStatus(String urlString) {
